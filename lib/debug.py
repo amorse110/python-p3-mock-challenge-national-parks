@@ -6,6 +6,9 @@ from classes.visitor import Visitor
 from classes.trip import Trip
 
 if __name__ == '__main__':
-    print("HELLO! :) let's debug :vibing_potato:")
+    p1 = NationalPark("Yosemmette")
+    vis = Visitor("Bill")
+    vis2 = Visitor('Steve')
+    t_1 = Trip(vis, p1, "May 5th", "May 9th")
 
-    # ipdb.set_trace()
+    ipdb.set_trace()
