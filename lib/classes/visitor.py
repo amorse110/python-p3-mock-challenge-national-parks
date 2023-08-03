@@ -14,10 +14,10 @@ class Visitor:
         if isinstance(name, str) and 1 <= len(name) <= 15:
             self._name = name
         else:
-            raise Exception("Visitor name must be a string 1-15 characters in length")
+            raise Exception
 
     def trips(self):
-        return 
+        return [trip for trip in Trip.all if trip.visitor == self] #filtering
 
     def national_parks(self):
-        pass
+        return [*set([trip.national_park for trip in self.trips()])] #mapping
